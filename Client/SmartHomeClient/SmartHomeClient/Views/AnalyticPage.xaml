@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
+             xmlns:gauge="clr-namespace:Syncfusion.SfGauge.XForms;assembly=Syncfusion.SfGauge.XForms"
+             x:Class="SmartHomeClient.Views.AnalyticPage">
+   
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="250" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="10" />
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Label Grid.Row="1" HorizontalOptions="CenterAndExpand" Text="Today Usage" TextColor="Black"></Label>
+            
+            <gauge:SfCircularGauge Grid.Row="1" Grid.RowSpan="3" IsCenterAligned="True">
+                <gauge:SfCircularGauge.Headers>
+                    <gauge:Header Text="3.5" Position="0.5,0.38" ForegroundColor="DarkOrange" TextSize="40" FontAttributes="Bold"/>
+                </gauge:SfCircularGauge.Headers>
+            <gauge:SfCircularGauge.Annotations>
+                <gauge:GaugeAnnotation  VerticalAlignment="End">
+                    <gauge:GaugeAnnotation.View>
+                        <Label Text="Hours" TextColor="Black" FontSize="15"/>
+                    </gauge:GaugeAnnotation.View>
+                </gauge:GaugeAnnotation>
+            </gauge:SfCircularGauge.Annotations>
+            <gauge:SfCircularGauge.Scales>
+                <gauge:Scale ShowFirstLabel="False" StartValue = "0" EndValue = "24" Interval ="5" StartAngle="180" SweepAngle="180" RimColor="LightGray" RadiusFactor = "1" RimThickness = "50" LabelOffset="0.6">
+                        <!--<gauge:Scale.Pointers>
+                            <gauge:NeedlePointer  Value="3" Type="Triangle" Color="Red" />
+                        </gauge:Scale.Pointers>-->
+                    <gauge:Scale.Ranges>
+                        <gauge:Range StartValue = "0" EndValue = "3.5"  Thickness = "50" Offset="1"/>
+                    </gauge:Scale.Ranges>
+                    <gauge:Scale.MajorTickSettings>
+                        <gauge:TickSettings StartOffset="0.7" EndOffset="0.75" Color ="Maroon" Thickness="1"  />
+                    </gauge:Scale.MajorTickSettings>
+                    <gauge:Scale.MinorTickSettings>
+                        <gauge:TickSettings Color ="DarkGray" Thickness="2"  />
+                    </gauge:Scale.MinorTickSettings>
+
+                </gauge:Scale>
+                </gauge:SfCircularGauge.Scales>
+
+            </gauge:SfCircularGauge>
+
+        <Label Grid.Row="3" HorizontalOptions="CenterAndExpand" Text="Last 5 Days Usage" TextColor="Black"></Label>
+
+        <microcharts:ChartView  Grid.Row="4" Grid.Column="0" BackgroundColor="LightGray" x:Name="chartView"></microcharts:ChartView>
+
+
+    </Grid>
+
+</ContentPage>

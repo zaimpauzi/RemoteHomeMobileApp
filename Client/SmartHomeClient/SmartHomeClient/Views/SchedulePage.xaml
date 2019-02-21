@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:numeric="clr-namespace:Syncfusion.SfNumericUpDown.XForms;assembly=Syncfusion.SfNumericUpDown.XForms"
+             x:Class="SmartHomeClient.Views.SchedulePage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="2" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="5" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1"  Text="Schedule Automation" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"></Label>
+        <Switch x:Name="scheduleSwitch" Grid.Row="1" Grid.Column="2" Scale="1" Toggled="ScheduleSwitch_Toggled"></Switch>
+        <BoxView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"/>
+        <StackLayout x:Name="scheduleStackLayout" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="StartAndExpand" Margin="0,10,0,0">
+            <Label Text="Date" VerticalTextAlignment="Center" Margin="5"></Label>
+            <DatePicker x:Name="datePicker" Date="01/01/2019" Margin="5"></DatePicker>
+            <Label Text="Time" VerticalTextAlignment="Center" Margin="5"></Label>
+            <TimePicker x:Name="timePicker" Time="12:00:00" Margin="5"></TimePicker>
+            <Label Text="Range (hour)" VerticalTextAlignment="Center" Margin="5"></Label>
+            <numeric:SfNumericUpDown x:Name="rangeHour" Value="0.5" Maximum="24" Minimum="0" MaximumDecimalDigits="1" HorizontalOptions="CenterAndExpand" Margin="5"/>
+            <Button x:Name="setScheduleBtn" Text="Set" Margin="5"></Button>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>

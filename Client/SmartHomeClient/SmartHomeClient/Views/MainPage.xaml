@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SmartHomeClient"
+             x:Class="SmartHomeClient.Views.MainPage" BackgroundColor="DarkGray">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="30" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+
+        </Grid.ColumnDefinitions>
+        <Image Grid.Row="1" x:Name="lampImage" Source="off.png" VerticalOptions="CenterAndExpand"></Image>
+        <Switch Grid.Row="2" x:Name="lampSwitch" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Toggled="lampSwitch_Toggled"></Switch>
+        <Frame x:Name="progressIndicator" Grid.Row="0" Grid.RowSpan="4"  IsVisible="False" BackgroundColor="Black" Opacity="0.7">
+            <ActivityIndicator Color="Red" IsRunning="true" IsVisible="True" VerticalOptions="Center" HorizontalOptions="Center"/>
+        </Frame>
+
+    </Grid>
+ 
+</ContentPage>
