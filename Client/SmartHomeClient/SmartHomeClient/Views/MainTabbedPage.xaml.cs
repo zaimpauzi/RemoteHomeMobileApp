@@ -13,15 +13,20 @@ namespace SmartHomeClient.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainTabbedPage : TabbedPage
     {
-        //Create objects for each tab.
-        //var locationTab = new Location();       // Location consist of map that shows relative user's location with respect to home location. Using Google map web API.
-        public MainTabbedPage(string serverIP)
+        string serverIP;
+        public MainTabbedPage(string _serverIP)
         {
             InitializeComponent();
-
+            Appearing += MainTabbedPage_Appearing;
+            serverIP = _serverIP;
             //Hide navigation button/bar
             //NavigationPage.SetHasBackButton(this, false);
+        }
 
+        private void MainTabbedPage_Appearing(object sender, EventArgs e)
+        {
+            //Initialize objects for each tab.
+            //var locationTab = new Location();       // Location consist of map that shows relative user's location with respect to home location. Using Google map web API.
             NavigationPage.SetHasNavigationBar(this, false);
             SchedulePage scheduleTab = new SchedulePage();
             MainPage switchTab = new MainPage(serverIP);         //MainPage consist of switch panel.
@@ -37,8 +42,6 @@ namespace SmartHomeClient.Views
             Children.Add(scheduleTab);
             Children.Add(analyticTab);
 
-
         }
-
     }
 }

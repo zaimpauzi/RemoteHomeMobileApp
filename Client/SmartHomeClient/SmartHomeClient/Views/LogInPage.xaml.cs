@@ -12,31 +12,33 @@ namespace SmartHomeClient.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LogInPage : ContentPage
 	{
-        //Initialized main tabbed page object.
         string defaultServerIP = "192.168.1.2";
         SettingPage settingPage = new SettingPage();
-
+        MainTabbedPage switchingPage;
         public LogInPage ()
 		{
             //Entrance page which request for credential to enter the app.
 			InitializeComponent ();
             settingPage.serverIP = defaultServerIP;
+            switchingPage = new MainTabbedPage(settingPage.serverIP);    //Initialized main tabbed page object
+            settingPage.Disappearing += SettingPage_Disappearing;
             progressIndicator.IsVisible = false;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            progressIndicator.IsVisible = true;
+            
             string username = "admin"; //temporarily hardcoded the username.
             string password = "sysadmin"; //temporarily hardcoded the password.
-             
+            
             //Check if the input username and password by user are match with the parameters set up.
             if ((usernameEntry.Text == username) && (passwordEntry.Text ==  password))
             {
                 statusLabel.Text = "";
-                //Navigate to the tabbed page.
-                MainTabbedPage switchingPage = new MainTabbedPage(settingPage.serverIP);
-                await Navigation.PushAsync(switchingPage);
+                progressIndicator.IsVisible = true;
+                switchingPage.Disappearing += SwitchingPage_Disappearing;
+                await Navigation.PushAsync(switchingPage);  //Navigate to the tabbed page.
+                progressIndicator.IsVisible = false;
 
             }
 
@@ -45,14 +47,22 @@ namespace SmartHomeClient.Views
             {
                 statusLabel.Text = "Wrong username or password!";
             }
-
-            progressIndicator.IsVisible = false;
-
         }
+
 
         private async void SettingBtn_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(settingPage);
+        }
+
+        private void SwitchingPage_Disappearing(object sender, EventArgs e)
+        {
+            switchingPage = new MainTabbedPage(settingPage.serverIP);    //Initialized main tabbed page object
+        }
+
+        private void SettingPage_Disappearing(object sender, EventArgs e)
+        {
+            switchingPage = new MainTabbedPage(settingPage.serverIP);    //Initialized main tabbed page object
         }
     }
 }

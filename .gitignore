@@ -3,3 +3,6 @@
 ################################################################################
 
 /Client/SmartHomeClient/SmartHomeClient.Android/obj
+/Client/SmartHomeClient/SmartHomeClient.Android/bin/Debug
+/Client/SmartHomeClient/SmartHomeClient/obj
+/Client/SmartHomeClient/SmartHomeClient/bin/Debug/netstandard2.0
