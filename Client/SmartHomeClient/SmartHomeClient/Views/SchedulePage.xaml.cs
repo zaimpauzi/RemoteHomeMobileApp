@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -32,6 +33,14 @@ namespace SmartHomeClient.Views
                 scheduleStackLayout.IsEnabled = false;
                 scheduleStackLayout.Opacity = 0.5;
             }
+        }
+
+        private async void SetScheduleBtn_Clicked(object sender, EventArgs e)
+        {
+            markImagePop.IsVisible = true;
+            await Task.Delay(500);
+            markImagePop.IsVisible = false;
+
         }
     }
 }

@@ -17,7 +17,6 @@
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="5" />
         </Grid.ColumnDefinitions>
-
         <Label Grid.Row="1" Grid.Column="1"  Text="Schedule Automation" TextColor="Black" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"></Label>
         <Switch x:Name="scheduleSwitch" Grid.Row="1" Grid.Column="2" Scale="1" Toggled="ScheduleSwitch_Toggled"></Switch>
         <BoxView Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" BackgroundColor="Gray" HorizontalOptions="FillAndExpand"/>
@@ -28,8 +27,9 @@
             <TimePicker x:Name="timePicker" Time="12:00:00" Margin="5"></TimePicker>
             <Label Text="Range (hour)" VerticalTextAlignment="Center" Margin="5"></Label>
             <numeric:SfNumericUpDown x:Name="rangeHour" Value="0.5" Maximum="24" Minimum="0" MaximumDecimalDigits="1" HorizontalOptions="CenterAndExpand" Margin="5"/>
-            <Button x:Name="setScheduleBtn" Text="Set" Margin="5"></Button>
+            <Button x:Name="setScheduleBtn" Text="Set" Margin="5" Clicked="SetScheduleBtn_Clicked"></Button>
         </StackLayout>
+        <Image x:Name="markImagePop" IsVisible="False" Source="mark.png" Grid.Row="0" Grid.Column="0" Grid.RowSpan="5" Grid.ColumnSpan="4" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="200" HeightRequest="200"></Image>
 
     </Grid>
 
