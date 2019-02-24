@@ -3,3 +3,10 @@
 ################################################################################
 
 /Client/SmartHomeClient/SmartHomeClient.Android/obj
+/Client/SmartHomeClient/SmartHomeClient/obj
+/Client/.vs/SmartHomeClient/v15/Server/sqlite3
+/Client/.vs/SmartHomeClient/v15
+/Client/SmartHomeClient/SmartHomeClient/bin/Debug/netstandard2.0
+/Client/SmartHomeClient/SmartHomeClient/bin/Release/netstandard2.0
+/Client/SmartHomeClient/SmartHomeClient.Android/bin
+/.vs

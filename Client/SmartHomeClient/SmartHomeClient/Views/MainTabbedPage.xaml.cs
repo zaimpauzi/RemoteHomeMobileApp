@@ -25,6 +25,10 @@ namespace SmartHomeClient.Views
 
         private void MainTabbedPage_Appearing(object sender, EventArgs e)
         {
+
+            //Clear to refresh all tabs
+            Children.Clear();
+
             //Initialize objects for each tab.
             //var locationTab = new Location();       // Location consist of map that shows relative user's location with respect to home location. Using Google map web API.
             NavigationPage.SetHasNavigationBar(this, false);
@@ -41,6 +45,7 @@ namespace SmartHomeClient.Views
             Children.Add(switchTab);
             Children.Add(scheduleTab);
             Children.Add(analyticTab);
+
 
         }
     }
