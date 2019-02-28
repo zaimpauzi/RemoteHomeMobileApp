@@ -10,3 +10,5 @@
 /Client/SmartHomeClient/SmartHomeClient/bin/Release/netstandard2.0
 /Client/SmartHomeClient/SmartHomeClient.Android/bin
 /.vs
+/Client/SmartHomeClient/SmartHomeClient.iOS/obj
+/Client/SmartHomeClient/SmartHomeClient.iOS/bin/iPhoneSimulator/Debug

@@ -17,8 +17,18 @@ namespace SmartHomeClient.Views
         MainTabbedPage switchingPage;
         public LogInPage ()
 		{
+            //if (Device.RuntimePlatform == Device.Android)
+            //{
+            //    appImage.Source = "AppIcon.png";
+
+            //}
+
+            //if (Device.RuntimePlatform == Device.iOS)
+            //{
+            //}
+
             //Entrance page which request for credential to enter the app.
-			InitializeComponent ();
+            InitializeComponent();
             settingPage.serverIP = defaultServerIP;
             switchingPage = new MainTabbedPage(settingPage.serverIP);    //Initialized main tabbed page object
             settingPage.Disappearing += SettingPage_Disappearing;
