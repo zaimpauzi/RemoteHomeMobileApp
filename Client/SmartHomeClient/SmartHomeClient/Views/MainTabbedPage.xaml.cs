@@ -41,6 +41,14 @@ namespace SmartHomeClient.Views
             //locationTab.Title = "Location";
             scheduleTab.Title = "Schedule";
 
+            //Initialized icon for iOS environment.
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                switchTab.Icon = "switchIcon.png";
+                scheduleTab.Icon = "scheduleIcon.png";
+                analyticTab.Icon = "analyticIcon.png";
+            }
+
             //Add those objects in each tab in MainTabbedPage
             Children.Add(switchTab);
             Children.Add(scheduleTab);

@@ -18,6 +18,16 @@ namespace SmartHomeClient.Views
             InitializeComponent();
             scheduleStackLayout.IsEnabled = false;
             scheduleStackLayout.Opacity = 0.5;
+            //if (Device.RuntimePlatform == Device.Android)
+            //{
+            //    appImage.Source = "AppIcon.png";
+
+            //}
+
+            if (Device.RuntimePlatform == Device.iOS)
+            {
+                scheduleSwitch.Scale = 0.8;
+            }
         }
 
         private void ScheduleSwitch_Toggled(object sender, ToggledEventArgs e)
@@ -38,8 +48,14 @@ namespace SmartHomeClient.Views
         private async void SetScheduleBtn_Clicked(object sender, EventArgs e)
         {
             markImagePop.IsVisible = true;
-            await Task.Delay(500);
+            scheduleStackLayout.IsEnabled = false;
+            scheduleStackLayout.Opacity = 0.5;
+            await Task.Delay(1000);
             markImagePop.IsVisible = false;
+            scheduleStackLayout.IsEnabled = true;
+            scheduleStackLayout.Opacity = 1;
+
+
 
         }
     }

@@ -12,3 +12,4 @@
 /.vs
 /Client/SmartHomeClient/SmartHomeClient.iOS/obj
 /Client/SmartHomeClient/SmartHomeClient.iOS/bin/iPhoneSimulator/Debug
+/Client/SmartHomeClient/SmartHomeClient.iOS/bin/iPhone/Ad-Hoc

@@ -7,8 +7,8 @@
    
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="10" />
-                <RowDefinition Height="30" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
                 <RowDefinition Height="250" />
                 <RowDefinition Height="30" />
                 <RowDefinition Height="*" />
@@ -19,7 +19,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             
-            <Label Grid.Row="1" HorizontalOptions="CenterAndExpand" Text="Today Usage" TextColor="Black"></Label>
+            <Label Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="End" Text="Today's Usage" TextColor="Black"></Label>
             
             <gauge:SfCircularGauge Grid.Row="1" Grid.RowSpan="3" IsCenterAligned="True">
                 <gauge:SfCircularGauge.Headers>
