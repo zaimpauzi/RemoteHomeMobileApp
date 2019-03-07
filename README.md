@@ -9,4 +9,4 @@ Flowchart
 1. Raspberry Pi set up with Raspbian OS.
 2. Database server installation. Refer to the video by "Pi4IoT" below for this part.
 
-[![MySQL Part #1 - How to install MySQL on the new RASPBIAN STRETCH OS](http://i.imgur.com/Ot5DWAW.png)](https://youtu.be/kQ0HoLva9Yc)
+[![MySQL Part #1 - How to install MySQL on the new RASPBIAN STRETCH OS](https://img.youtube.com/vi/kQ0HoLva9Yc/0.jpg)](http://www.youtube.com/watch?v=kQ0HoLva9Yc&feature=youtu.be)
