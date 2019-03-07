@@ -9,4 +9,12 @@ Flowchart
 1. Raspberry Pi set up with Raspbian OS.
 2. Database server installation. Refer to the video by "Pi4IoT" below for this part.
 
-[![MySQL Part #1 - How to install MySQL on the new RASPBIAN STRETCH OS](https://img.youtube.com/vi/kQ0HoLva9Yc/0.jpg)](http://www.youtube.com/watch?v=kQ0HoLva9Yc&feature=youtu.be)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![MySQL Part #1 - How to install MySQL on the new RASPBIAN STRETCH OS](https://img.youtube.com/vi/kQ0HoLva9Yc/0.jpg)](http://www.youtube.com/watch?v=kQ0HoLva9Yc&feature=youtu.be)
+
+3. Run SQL script to create a table (KIV: will write later).
+4. Drop RequestSwitchState.php and UpdateSwitchState.php to server root index directory. Ensure those scripts can be run using browser.
+5. Drop HomeSwitchHandler.py in any directory. Run it using terminal. Terminal command >> sudo python HomeSwitchHandler.py
+
+# Client Usage
+
+Download the Android ad-hoc distribution and install it on your phone. Currently, iOS is not distribute publicly due to development's provisioning profile have limitation number of device.
