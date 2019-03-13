@@ -17,4 +17,6 @@ Flowchart
 
 # Client Usage
 
-Download the Android ad-hoc distribution and install it on your phone. Currently, iOS is not distribute publicly due to development's provisioning profile have limitation number of device.
+Download the Android ad-hoc distribution and install it on your phone. Currently, iOS is not distribute publicly due to development's provisioning profile have limitation number of device. See the usage demo video below:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![MySQL Part #1 - Remote Home Client Mobile Application](https://img.youtube.com/vi/TixUWaTxB4Y/0.jpg)](https://www.youtube.com/watch?v=TixUWaTxB4Y&t=15s)
